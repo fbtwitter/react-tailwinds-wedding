@@ -3,15 +3,42 @@ import WeddingSong from '../assets/mp3/teman-hidup.mp3'
 import LeafLeft from '../assets/png/leaf-left.png'
 import LeafRight from '../assets/png/leaf-right.png'
 import { useState } from 'react'
+import MessageForm from '../components/MessageForm'
+import Messagelist from '../components/MessageList'
+import MessageProperties from '../components/MessageProperties'
+import { MessageProvider } from '../context/MessageContext'
 // import { useParams } from 'react-router-dom'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
-
-  // const params = useParams()
+  const [openMessage, setOpenMessage] = useState(false)
 
   return (
     <>
+      {openMessage && (
+        <div className="absolute z-20 top-0 bottom-0 left-0 right-0 bg-white">
+          <img
+            src={LeafLeft}
+            alt="top-left"
+            className="w-5/12 h-5/12 absolute top-0 left-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+          />
+          <img
+            src={LeafRight}
+            alt="bottom-right"
+            className="w-5/12 h-5/12 absolute bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+          />
+          <MessageProvider>
+            <div className="container px-4 max-w-screen-md mx-auto">
+              <MessageForm />
+              <MessageProperties />
+              <Messagelist />
+              <button onClick={() => setOpenMessage(!openMessage)}>
+                Tutup Message
+              </button>
+            </div>
+          </MessageProvider>
+        </div>
+      )}
       <div
         className={`${
           openInvitation
@@ -149,7 +176,7 @@ function Home() {
 
                 <div className="flex flex-col justify-between gap-y-8">
                   <a
-                    href="https://goo.gl/maps/aCmmRstc94G7zFA36"
+                    href="https://goo.gl/maps/ThYCzDdbhEHRqYrt7"
                     className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 inline-block border border-teal-800 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
                     target="_blank"
                     rel="noreferrer"
@@ -159,7 +186,10 @@ function Home() {
                 </div>
               </div>
               <div className="fixed bottom-4 right-4">
-                <button className="w-12 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white">
+                <button
+                  className="w-12 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white"
+                  onClick={() => setOpenMessage(!openMessage)}
+                >
                   <svg
                     width={'20'}
                     className="fill-current"

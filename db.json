@@ -1,0 +1,29 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "text": "Jangan lupa absen pagi",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "text": "Menambahkan fitur linter ke todo app",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Belajar react fundamental, component, props, state, past props, event, context, working on the back end,",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "text": "Menyampaikan progress pengerjaan react arsty app ss",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "text": "halooss",
+      "completed": true
+    }
+  ]
+}
