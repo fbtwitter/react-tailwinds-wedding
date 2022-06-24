@@ -16,10 +16,10 @@ function Home() {
         className={`${
           openInvitation
             ? 'absolute top-0 bottom-0 right-0 left-0'
-            : 'translate-y-full transition-all'
+            : 'hidden -translate-y-full transition-all'
         }`}
       >
-        <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div>
+        {/* <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div> */}
         <main className="absolute top-0 bottom-0 right-0 left-0">
           <div className="relative w-screen h-screen flex flex-col justify-center items-center">
             <img
@@ -72,7 +72,7 @@ function Home() {
         </main>
       </div>
       <div className={`${openInvitation ? 'hidden' : ''}`}>
-        <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div>
+        {/* <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div> */}
         <main className="absolute top-0 bottom-0 right-0 left-0">
           <div className="relative w-screen h-screen z-10 flex flex-col justify-center items-center text-center">
             <img
