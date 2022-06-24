@@ -158,8 +158,8 @@ function Home() {
                   </a>
                 </div>
               </div>
-              <div className="fixed bottom-10 right-10">
-                <button className="w-16 h-16 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white">
+              <div className="fixed bottom-4 right-4">
+                <button className="w-12 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white">
                   <svg
                     width={'20'}
                     className="fill-current"
