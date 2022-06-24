@@ -32,39 +32,41 @@ function Home() {
             className="w-5/12 h-5/12 fixed bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
           />
           <div className="w-screen h-screen flex flex-col justify-center items-center">
-            <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
-              Wedding Of
-            </h2>
-            <div className="bride flex justify-center items-center mb-5 ">
-              <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">
-                Iqlima
-              </h1>
-              <h2 className="mx-4 font-['Dancing_Script'] font-bold text-3xl text-slate-300">
-                &
+            <div className="container px-4">
+              <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
+                Wedding Of
               </h2>
-              <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">
-                Reza
-              </h1>
+              <div className="bride flex justify-center items-center mb-5 ">
+                <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">
+                  Iqlima
+                </h1>
+                <h2 className="mx-4 font-['Dancing_Script'] font-bold text-3xl text-slate-300">
+                  &
+                </h2>
+                <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">
+                  Reza
+                </h1>
+              </div>
+
+              <h2 className="font-['Arvo'] font-semibold text-xl my-2 text-teal-800 text-center max-w-2xl sm:text-2xl">
+                Kepada Yth :
+                <span className="block font-bold tracking-widest uppercase mt-5 text-2xl text-teal-800 sm:text-4xl">
+                  Nita Dwi Imroatun
+                </span>
+                <span className="block mt-5 font-['Arvo'] font-light tracking-widest text-center text-sm text-teal-800 mb-5 sm:text-lg">
+                  Tanpa mengurangi rasa hormat, Kami mengundang
+                  Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri
+                  acara pernikahan kami.
+                </span>
+              </h2>
+
+              <button
+                className="text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                onClick={() => setOpenInvitation(!openInvitation)}
+              >
+                Buka Undangan
+              </button>
             </div>
-
-            <h2 className="font-['Arvo'] font-semibold text-xl my-2 text-teal-800 text-center max-w-2xl sm:text-2xl">
-              Kepada Yth :
-              <span className="block font-bold tracking-widest uppercase mt-5 text-2xl text-teal-800 sm:text-4xl">
-                Nita Dwi Imroatun
-              </span>
-              <span className="block mt-5 font-['Arvo'] font-light tracking-widest text-center text-sm text-teal-800 mb-5 sm:text-lg">
-                Tanpa mengurangi rasa hormat, Kami mengundang
-                Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri
-                acara pernikahan kami.
-              </span>
-            </h2>
-
-            <button
-              className="text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-              onClick={() => setOpenInvitation(!openInvitation)}
-            >
-              Buka Undangan
-            </button>
           </div>
         </main>
       </div>
