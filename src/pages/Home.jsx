@@ -116,7 +116,7 @@ function Home() {
           "
                 >
                   <h1 className="font-['Dancing_Script'] font-bold text-4xl sm:text-6xl mb-5 text-teal-900">
-                    Iqlima Syahara, A.P.
+                    Iqlima Syahara, A.P.A.Pj
                   </h1>
                   <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl text-teal-700 opacity-70">
                     Putri dari Mujiono Raharjo, S.Pd. (Alm) dan Ibu Sutami
@@ -157,7 +157,7 @@ function Home() {
                           Akad
                         </h4>
                         <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
-                          08.30
+                          08.30 WIB
                         </h4>
                       </div>
                       <div className="flex flex-col items-center gap-2">
@@ -165,7 +165,7 @@ function Home() {
                           Resepsi
                         </h4>
                         <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
-                          10.00 - 12.00
+                          10.00 - 12.00 WIB
                         </h4>
                       </div>
                     </div>
