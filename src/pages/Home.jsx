@@ -3,7 +3,7 @@ import WeddingSong from '../assets/mp3/teman-hidup.mp3'
 import LeafLeft from '../assets/png/leaf-left.png'
 import LeafRight from '../assets/png/leaf-right.png'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
@@ -95,7 +95,7 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.
                   </h1>
-                  <p className="font-['Dancing_Script'] tracking-widest font-bold text-xl sm:text-3xl text-teal-700 opacity-70">
+                  <p className="font-['Dancing_Script'] tracking-widest font-bold text-lg sm:text-3xl text-teal-700 opacity-70">
                     Putri dari Bp. H. Mujiono Raharjo, S.Pd. (Alm) dan Ibu Hj.
                     Sutami
                   </p>
@@ -105,7 +105,7 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Reza Fauzi Augusdi, S.Tr.Kom.
                   </h1>
-                  <p className="font-['Dancing_Script'] tracking-widest font-bold text-xl sm:text-3xl mb-5 text-teal-700 opacity-70">
+                  <p className="font-['Dancing_Script'] tracking-widest font-bold text-lg sm:text-3xl mb-5 text-teal-700 opacity-70">
                     Putra dari Bp. Ir. H. Rudy Skundar Oktarijanto dan Ibu Hj.
                     Ina Herlina
                   </p>
@@ -115,53 +115,62 @@ function Home() {
                   <h3 className="font-['Arvo'] font-light tracking-widest text-center  text-lg sm:text-2xl uppercase text-teal-800 mb-3 sm:mb-5">
                     Are Getting Married
                   </h3>
-                  <p className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-xl uppercase text-teal-800">
+                  <p className="font-['Arvo'] font-light tracking-widest text-center text-lg sm:text-xl uppercase text-teal-800">
                     On{' '}
                     <span className="font-bold text-slate-900">
                       14 JULY 2022
                     </span>
                     , AT{' '}
                     <span className="font-bold text-slate-900">
-                      bride's house
+                      bride&apos;s house
                     </span>{' '}
                     JABUNG, Malang
                   </p>
 
                   <div className="flex mt-5 sm:mt-10 justify-evenly">
                     <div className="flex flex-col items-center gap-2">
-                      <h4 className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800">
+                      <h4 className="font-['Arvo'] text-lg sm:text-xl uppercase font-light text-teal-800">
                         Akad
                       </h4>
-                      <h4 className="font-['Arvo'] text-base sm:text-2xl font-light text-slate-600">
+                      <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
                         08.30
                       </h4>
                     </div>
                     <div className="flex flex-col items-center gap-2">
-                      <h4 className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800">
+                      <h4 className="font-['Arvo'] text-lg sm:text-xl uppercase font-light text-teal-800">
                         Resepsi
                       </h4>
-                      <h4 className="font-['Arvo'] text-base sm:text-2xl font-light text-slate-600">
+                      <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
                         10.00 - 12.00
                       </h4>
                     </div>
                   </div>
                 </div>
 
-                <div className="hidden">
-                  <div className="flex flex-col justify-between gap-y-8">
-                    <a
-                      href="https://goo.gl/maps/aCmmRstc94G7zFA36"
-                      className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 inline-block border border-teal-800 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Buka Maps
-                    </a>
-                    <button className="underline font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 inline-block">
-                      Kirim Pesan
-                    </button>
-                  </div>
+                <div className="flex flex-col justify-between gap-y-8">
+                  <a
+                    href="https://goo.gl/maps/aCmmRstc94G7zFA36"
+                    className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 inline-block border border-teal-800 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Buka Maps
+                  </a>
                 </div>
+              </div>
+              <div className="fixed bottom-10 right-10">
+                <button className="w-16 h-16 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white">
+                  <svg
+                    width={'20'}
+                    className="fill-current"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LiveChat</title>
+                    <path d="M23.849 14.91c-.24 2.94-2.73 5.22-5.7 5.19h-3.15l-6 3.9v-3.9l6-3.9h3.15c.93.03 1.71-.66 1.83-1.59.18-3 .18-6-.06-9-.06-.84-.75-1.47-1.56-1.53-2.04-.09-4.2-.18-6.36-.18s-4.32.06-6.36.21c-.84.06-1.5.69-1.56 1.53-.21 3-.24 6-.06 9 .09.93.9 1.59 1.83 1.56h3.15v3.9h-3.15a5.644 5.644 0 01-5.7-5.19c-.21-3.21-.18-6.39.06-9.6a5.57 5.57 0 015.19-5.1c2.1-.15 4.35-.21 6.6-.21s4.5.06 6.63.24a5.57 5.57 0 015.19 5.1c.21 3.18.24 6.39.03 9.57z" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
