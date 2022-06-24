@@ -21,17 +21,17 @@ function Home() {
       >
         <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div>
         <main className="absolute top-0 bottom-0 right-0 left-0">
-          <img
-            src={LeafLeft}
-            alt="top-left"
-            className="w-5/12 h-5/12 fixed top-0 left-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-          <img
-            src={LeafRight}
-            alt="bottom-right"
-            className="w-5/12 h-5/12 fixed bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-          <div className="w-screen h-screen flex flex-col justify-center items-center">
+          <div className="relative w-screen h-screen flex flex-col justify-center items-center">
+            <img
+              src={LeafLeft}
+              alt="top-left"
+              className="w-5/12 h-5/12 absolute top-0 left-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+            />
+            <img
+              src={LeafRight}
+              alt="bottom-right"
+              className="w-5/12 h-5/12 absolute bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+            />
             <div className="container px-4">
               <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
                 Wedding Of
@@ -59,33 +59,31 @@ function Home() {
                   acara pernikahan kami.
                 </span>
               </h2>
-
-              <button
-                className="text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-                onClick={() => setOpenInvitation(!openInvitation)}
-              >
-                Buka Undangan
-              </button>
             </div>
+            <button
+              className="text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              onClick={() => setOpenInvitation(!openInvitation)}
+            >
+              Buka Undangan
+            </button>
           </div>
         </main>
       </div>
       <div className={`${openInvitation ? 'hidden' : ''}`}>
         <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div>
         <main className="absolute top-0 bottom-0 right-0 left-0">
-          <img
-            src={LeafLeft}
-            alt="top-left"
-            className="w-5/12 h-5/12 fixed top-0 left-0 z-0 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-
-          <img
-            src={LeafRight}
-            alt="bottom-right"
-            className="w-5/12 h-5/12 fixed bottom-0 right-0 z-0 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-
           <div className="relative w-screen h-screen flex flex-col justify-center items-center text-center z-10">
+            <img
+              src={LeafLeft}
+              alt="top-left"
+              className="w-5/12 h-5/12 absolute top-0 left-0 z-0 opacity-90 xl:w-3/12 xl:h-3/12"
+            />
+
+            <img
+              src={LeafRight}
+              alt="bottom-right"
+              className="w-5/12 h-5/12 absolute bottom-0 right-0 z-0 opacity-90 xl:w-3/12 xl:h-3/12"
+            />
             <div className="container px-4">
               <div
                 className="bride flex flex-col justify-center items-center mb-5 sm:mb-10
