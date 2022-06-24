@@ -13,32 +13,35 @@ function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
   const [openMessage, setOpenMessage] = useState(false)
 
+  if (openMessage) {
+    return (
+      <div className="absolute z-20 top-0 bottom-0 left-0 right-0 bg-white">
+        <img
+          src={LeafLeft}
+          alt="top-left"
+          className="w-5/12 h-5/12 absolute top-0 left-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+        />
+        <img
+          src={LeafRight}
+          alt="bottom-right"
+          className="w-5/12 h-5/12 absolute bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
+        />
+        <MessageProvider>
+          <div className="container px-4 max-w-screen-md mx-auto">
+            <MessageForm />
+            <MessageProperties />
+            <Messagelist />
+            <button onClick={() => setOpenMessage(!openMessage)}>
+              Tutup Message
+            </button>
+          </div>
+        </MessageProvider>
+      </div>
+    )
+  }
+
   return (
     <>
-      {openMessage && (
-        <div className="absolute z-20 top-0 bottom-0 left-0 right-0 bg-white">
-          <img
-            src={LeafLeft}
-            alt="top-left"
-            className="w-5/12 h-5/12 absolute top-0 left-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-          <img
-            src={LeafRight}
-            alt="bottom-right"
-            className="w-5/12 h-5/12 absolute bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
-          />
-          <MessageProvider>
-            <div className="container px-4 max-w-screen-md mx-auto">
-              <MessageForm />
-              <MessageProperties />
-              <Messagelist />
-              <button onClick={() => setOpenMessage(!openMessage)}>
-                Tutup Message
-              </button>
-            </div>
-          </MessageProvider>
-        </div>
-      )}
       <div
         className={`${
           openInvitation
