@@ -105,8 +105,8 @@ function Home() {
             />
             <div className="container p-4 bg-amber-50">
               <div className="flex flex-col justify-center items-center text-center">
-                <div className="h-screen flex flex-col justify-center mb-5">
-                  <h3 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
+                <div className="flex flex-col justify-center my-60 ">
+                  <h3 className="text-2xl font-['Dancing_Script'] tracking-widest text-teal-900">
                     &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
                     menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
                     agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
@@ -115,10 +115,10 @@ function Home() {
                   </h3>
                 </div>
                 <div className="flex flex-col justify-center mb-36">
-                  <h2 className="text-3xl font-['Dancing_Script'] tracking-wide px-2 text-teal-900 mb-10">
+                  <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎
                   </h2>
-                  <h3 className="font-['Arvo'] font-light tracking-widest text-lg text-teal-900 mx-4">
+                  <h3 className="font-['Arvo'] font-medium tracking-widest text-lg text-teal-900">
                     Dengan memohon Rahmat Allah SWT dan dengan segenap
                     kerendahaan hati, kami bermaksud akan menyelenggarakan ikat
                     janji suci kami
@@ -128,11 +128,11 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h1>
-                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl text-teal-700 opacity-70 mb-4">
+                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
                     Putri dari Mujiono Raharjo, S.Pd. (Alm) dan Ibu Sutami
                     (Almh.)
                   </p>
-                  <p className="font-['Arvo'] tracking-wide text-base text-teal-700 font-light opacity-70">
+                  <p className="font-['Arvo'] tracking-wide text-base text-teal-800/70">
                     {' '}
                     Jalan Dahlia 23 RT 007 RW 001, Slamparejo, Kec. Jabung,
                     Kabupaten Malang, Jawa Timur 65155
@@ -143,11 +143,11 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Reza Fauzi Augusdi, S.Tr.Kom.
                   </h1>
-                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700 opacity-70">
+                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
                     Putra dari Ir. H. Rudy Skundar Oktarijanto dan Ibu Hj. Ina
                     Herlina
                   </p>
-                  <p className="font-['Arvo'] tracking-wide text-base text-teal-700 font-light opacity-70">
+                  <p className="font-['Arvo'] tracking-wide text-base text-teal-800/70">
                     {' '}
                     Perum Graha Indah Baturan Blok G No 6 Colomadu, Karanganyar,
                     Jawa Tengah 57171
@@ -155,13 +155,11 @@ function Home() {
                 </div>
 
                 <div className="event flex flex-col justify-center align-items mb-4">
-                  <h3 className="font-['Arvo'] font-medium tracking-widest text-center text-lg sm:text-2xl text-teal-800 mb-3 sm:mb-5 max-w-xs">
+                  <h3 className="font-['Arvo'] font-medium tracking-widest text-center text-xl sm:text-2xl text-teal-800 mb-3 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
-                  <p className="font-['Arvo'] font-light tracking-widest text-center text-xl sm:text-xl uppercase text-teal-800">
-                    <span className=" font-bold text-3xl text-teal-900 underline-offset-4">
-                      14 JULI 2022
-                    </span>
+                  <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase ">
+                    14 JULI 2022
                   </p>
                 </div>
 
@@ -205,7 +203,7 @@ function Home() {
                   </div>
                 </div>
 
-                <div className="max-w-base border my-sm mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
+                <div className="max-w-base border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
                   <div className="flex justify-center">
                     <div className="flex flex-col items-center gap-2">
                       <h4 className="font-['Dancing_Script'] text-5xl sm:text-xl font-light text-teal-800">
@@ -251,8 +249,8 @@ function Home() {
                   berkenan memberikan doa terbaik untuk pernikahan kami.
                 </p>
               </div>
-              <div className="event flex flex-col justify-center align-items mb-10">
-                <h2 className="font-['Arvo'] font-semibold text-xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
+              <div className="flex flex-col justify-center align-items my-60">
+                <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
                   Kami yang berhabagia,
                 </h2>
                 <div className="bride flex justify-center items-center mb-5 ">
@@ -266,13 +264,12 @@ function Home() {
                     Reza
                   </h1>
                 </div>
+                <footer className="font-['Arvo'] ">
+                  <h2 className="font-['Arvo'] font-semibold text-lg my-2 text-teal-600/80 text-center max-w-2xl">
+                    &copy; Reza Fauzi Augusdi
+                  </h2>
+                </footer>
               </div>
-              <footer className="my-4 font-['Arvo'] ">
-                <h2 className="font-medium text-left text-base sm:text-2xl text-teal-800 sm:mb-5">
-                  &copy; Reza Fauzi Augusdi
-                </h2>
-              </footer>
-
               <div className="fixed bottom-4 right-4 z-10">
                 <button
                   className="px-4 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white"
