@@ -61,7 +61,7 @@ function Home() {
             <div className="container px-4">
               <div className="flex flex-col justify-center items-center">
                 <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
-                  Wedding Of
+                  The Wedding Of
                 </h2>
                 <div className="bride flex justify-center items-center mb-5 ">
                   <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">
@@ -75,17 +75,14 @@ function Home() {
                   </h1>
                 </div>
 
-                <h2 className="font-['Arvo'] font-semibold text-xl my-2 text-teal-800 text-center max-w-2xl sm:text-2xl">
-                  Kepada Yth :
-                  <span className="block font-bold tracking-widest uppercase mt-5 text-2xl text-teal-800 sm:text-4xl">
-                    {to}
-                  </span>
-                  <span className="block mt-5 font-['Arvo'] font-light tracking-widest text-center text-sm text-teal-800 mb-5 sm:text-lg">
-                    Tanpa mengurangi rasa hormat, Kami mengundang
-                    Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri
-                    acara pernikahan kami.
-                  </span>
+                <h2 className="font-['Arvo'] font-semibold text-lg my-2 tracking-wide text-teal-800 text-center max-w-2xl sm:text-2xl">
+                  Kepada Bapak/Ibu/Saudara/i
                 </h2>
+
+                <span className="font-sans block font-bold tracking-wide my-4 w-full text-3xl uppercase text-teal-900 sm:text-4xl border p-4 rounded-md bg-slate-100 text-center">
+                  {to}
+                </span>
+
                 <button
                   className="text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
                   onClick={() => setOpenInvitation(!openInvitation)}
@@ -109,13 +106,23 @@ function Home() {
             <div className="container p-4">
               <div className="flex flex-col justify-center items-center text-center">
                 <div className="h-screen flex flex-col justify-center mb-5">
-                  <h2 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
+                  <h2 className="text-2xl font-['Dancing_Script'] tracking-wide px-2 text-teal-900">
+                    السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎
+                    <span className="block font-['Arvo'] text-lg">
+                      Assalamu&apos;alaikum Warahmatullahi Wabarakatuh{' '}
+                    </span>
+                  </h2>
+                  <h3>
+                    Dengan memohon Rahmat Allah SWT dan dengan segenap
+                    kerendahaan hati, perkenankanlah kami
+                  </h3>
+                  {/* <h3 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
                     &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
                     menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
                     agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
                     menjadikan di antaramu rasa kasih dan sayang&quot;
                     <span className="block">(QS. Ar-Rum : 21)</span>
-                  </h2>
+                  </h3> */}
                 </div>
                 <div
                   className="bride h-screen flex flex-col justify-center items-center mb-5 sm:mb-10
@@ -149,6 +156,10 @@ function Home() {
                     Jawa Tengah 57171
                   </p>
                 </div>
+                {/*
+                 mengundang
+                    Bapak/Ibu/Saudara/i untuk dapat menghadiri acara pernikahan
+                    kami yang dilaksanakan pada */}
 
                 <div className="event flex flex-col justify-center align-items mb-10">
                   <h3 className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-2xl uppercase text-teal-800 mb-3 sm:mb-5">
