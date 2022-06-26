@@ -7,11 +7,16 @@ import MessageForm from '../components/MessageForm'
 import Messagelist from '../components/MessageList'
 import MessageProperties from '../components/MessageProperties'
 import { MessageProvider } from '../context/MessageContext'
-// import { useParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
   const [openMessage, setOpenMessage] = useState(false)
+  const [searchParams] = useSearchParams({
+    to: 'My Bestie',
+  })
+
+  let to = searchParams.get('to')
 
   if (openMessage) {
     return (
@@ -73,7 +78,7 @@ function Home() {
                 <h2 className="font-['Arvo'] font-semibold text-xl my-2 text-teal-800 text-center max-w-2xl sm:text-2xl">
                   Kepada Yth :
                   <span className="block font-bold tracking-widest uppercase mt-5 text-2xl text-teal-800 sm:text-4xl">
-                    Nita Dwi Imroatun
+                    {to}
                   </span>
                   <span className="block mt-5 font-['Arvo'] font-light tracking-widest text-center text-sm text-teal-800 mb-5 sm:text-lg">
                     Tanpa mengurangi rasa hormat, Kami mengundang
@@ -103,26 +108,32 @@ function Home() {
             />
             <div className="container p-4">
               <div className="flex flex-col justify-center items-center text-center">
-                <div className="flex flex-col justify-center mb-5">
-                  <div>
-                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                <div className="h-screen flex flex-col justify-center mb-5">
+                  <h2 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
+                    &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
                     menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
                     agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
-                    menjadikan di antaramu rasa kasih dan sayang"
-                  </div>
+                    menjadikan di antaramu rasa kasih dan sayang&quot;
+                    <span className="block">(QS. Ar-Rum : 21)</span>
+                  </h2>
                 </div>
                 <div
-                  className="bride flex flex-col justify-center items-center mb-5 sm:mb-10
+                  className="bride h-screen flex flex-col justify-center items-center mb-5 sm:mb-10
           "
                 >
                   <h1 className="font-['Dancing_Script'] font-bold text-4xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h1>
-                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl text-teal-700 opacity-70">
+                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl text-teal-700 opacity-70 mb-4">
                     Putri dari Mujiono Raharjo, S.Pd. (Alm) dan Ibu Sutami
                     (Almh.)
                   </p>
-                  <h2 className="font-['Dancing_Script'] font-bold text-xl sm:text-4xl my-3 sm:my-5 text-slate-500">
+                  <p className="font-['Arvo'] tracking-wide text-base text-teal-700 font-light opacity-70">
+                    {' '}
+                    Jalan Dahlia 23 RT 007 RW 001, Slamparejo, Kec. Jabung,
+                    Kabupaten Malang, Jawa Timur 65155
+                  </p>
+                  <h2 className="font-['Dancing_Script'] font-bold text-3xl sm:text-4xl my-8 sm:my-5 text-slate-500">
                     &
                   </h2>
                   <h1 className="font-['Dancing_Script'] font-bold text-4xl sm:text-6xl mb-5 text-teal-900">
@@ -132,13 +143,18 @@ function Home() {
                     Putra dari Ir. H. Rudy Skundar Oktarijanto dan Ibu Hj. Ina
                     Herlina
                   </p>
+                  <p className="font-['Arvo'] tracking-wide text-base text-teal-700 font-light opacity-70">
+                    {' '}
+                    Perum Graha Indah Baturan Blok G No 6 Colomadu, Karanganyar,
+                    Jawa Tengah 57171
+                  </p>
                 </div>
 
-                <div className="event flex flex-col mb-10">
-                  <h3 className="font-['Arvo'] font-light tracking-widest text-center text-lg sm:text-2xl uppercase text-teal-800 mb-3 sm:mb-5">
+                <div className="event flex flex-col justify-center align-items mb-10">
+                  <h3 className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-2xl uppercase text-teal-800 mb-3 sm:mb-5">
                     Akan Melaksanakan Pernikahan
                   </h3>
-                  <p className="font-['Arvo'] font-light tracking-widest text-center text-lg sm:text-xl uppercase text-teal-800">
+                  <p className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-xl uppercase text-teal-800">
                     Pada{' '}
                     <span className="font-bold text-slate-900">
                       14 JULY 2022
@@ -150,40 +166,73 @@ function Home() {
                     JABUNG, Malang
                   </p>
 
-                  <div className="mx-auto w-full border my-5 p-5 rounded-md  bg-slate-100 flex flex-col gap-8">
-                    <div className="flex justify-evenly">
+                  <div className="max-w-base border my-8 mx-4 p-8 rounded-md bg-slate-100 flex flex-col gap-6">
+                    <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
-                        <h4 className="font-['Arvo'] text-lg sm:text-xl uppercase font-light text-teal-800">
-                          Akad
+                        <h4 className="font-['Dancing_Script'] text-5xl sm:text-xl font-light text-teal-800">
+                          Akad Nikah
                         </h4>
-                        <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
+                        <span className="bg-slate-800 w-full h-[0.01rem] my-4"></span>
+                        <h4 className="font-['Arvo'] text-lg sm:text-2xl ont-light text-slate-600">
                           08.30 WIB
                         </h4>
                       </div>
+                    </div>
+
+                    <h3 className="max-w-2xl mx-auto font-['Arvo'] font-normal tracking-wider text-slate-900 text-base">
+                      Jalan Dahlia 23 RT 007 RW 001, Slamparejo, Kec. Jabung,
+                      Kabupaten Malang, Jawa Timur 65155
+                    </h3>
+
+                    <div className="max-w-fit mx-auto">
+                      <a
+                        href="https://goo.gl/maps/ThYCzDdbhEHRqYrt7"
+                        className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 flex gap-4 border border-teal-800 py-3 px-4 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <svg
+                          width={'18'}
+                          className="fill-current"
+                          role="img"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <title>Google Maps</title>
+                          <path d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+                        </svg>
+                        Buka Maps
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="max-w-base border my-sm mx-4 p-8 rounded-md bg-slate-100 flex flex-col gap-6">
+                    <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
-                        <h4 className="font-['Arvo'] text-lg sm:text-xl uppercase font-light text-teal-800">
-                          Resepsi
+                        <h4 className="font-['Dancing_Script'] text-5xl sm:text-xl font-light text-teal-800">
+                          Syukuran
                         </h4>
-                        <h4 className="font-['Arvo'] text-lg sm:text-2xl font-light text-slate-600">
+                        <span className="bg-slate-800 w-full h-[0.01rem] my-4"></span>
+                        <h4 className="font-['Arvo'] text-lg sm:text-2xl ont-light text-slate-600">
                           10.00 - 12.00 WIB
                         </h4>
                       </div>
                     </div>
 
-                    <h3 className="max-w-2xl mx-auto font-['Arvo'] font-normal tracking-wider text-slate-900 text-lg">
+                    <h3 className="max-w-2xl mx-auto font-['Arvo'] font-normal tracking-wider text-slate-900 text-base">
                       Jalan Dahlia 23 RT 007 RW 001, Slamparejo, Kec. Jabung,
                       Kabupaten Malang, Jawa Timur 65155
                     </h3>
 
-                    <div className=" max-w-fit mx-auto">
+                    <div className="max-w-fit mx-auto">
                       <a
                         href="https://goo.gl/maps/ThYCzDdbhEHRqYrt7"
-                        className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 flex gap-4 border border-teal-800 py-3 px-6 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
+                        className="font-['Arvo'] text-base sm:text-xl uppercase font-light text-teal-800 flex gap-4 border border-teal-800 py-3 px-4 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-white"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <svg
-                          width={'20'}
+                          width={'18'}
                           className="fill-current"
                           role="img"
                           viewBox="0 0 24 24"
