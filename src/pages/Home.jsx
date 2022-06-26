@@ -18,24 +18,24 @@ function Home() {
 
   let to = searchParams.get('to')
 
-  if (openMessage) {
-    return (
-      <>
-        <div className="absolute top-0 bottom-0 left-0 right-0  bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
-          <MessageProvider>
-            <div className="container px-4 max-w-screen-md mx-auto">
-              <MessageForm />
-              <MessageProperties />
-              <Messagelist />
-              <button onClick={() => setOpenMessage(!openMessage)}>
-                Tutup Message
-              </button>
-            </div>
-          </MessageProvider>
-        </div>
-      </>
-    )
-  }
+  // if (openMessage) {
+  //   return (
+  //     <>
+  //       <div className="absolute top-0 bottom-0 left-0 right-0  bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
+  //         <MessageProvider>
+  //           <div className="container px-4 max-w-screen-md mx-auto">
+  //             <MessageForm />
+  //             <MessageProperties />
+  //             <Messagelist />
+  //             <button onClick={() => setOpenMessage(!openMessage)}>
+  //               Tutup Message
+  //             </button>
+  //           </div>
+  //         </MessageProvider>
+  //       </div>
+  //     </>
+  //   )
+  // }
 
   return (
     <>
@@ -47,7 +47,7 @@ function Home() {
         }`}
       >
         <main className="absolute top-0 bottom-0 right-0 left-0">
-          <div className="relative w-screen h-screen flex flex-col justify-center items-center">
+          <div className="relative w-screen h-screen flex flex-col justify-center items-center bg-amber-50">
             <img
               src={LeafLeft}
               alt="top-left"
@@ -58,7 +58,7 @@ function Home() {
               alt="bottom-right"
               className="w-5/12 h-5/12 absolute bottom-0 right-0 z-10 opacity-90 xl:w-3/12 xl:h-3/12"
             />
-            <div className="container px-4">
+            <div className="container px-4 ">
               <div className="flex flex-col justify-center items-center">
                 <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
                   The Wedding Of
@@ -79,7 +79,7 @@ function Home() {
                   Kepada Bapak/Ibu/Saudara/i
                 </h2>
 
-                <span className="font-sans block font-bold tracking-wide my-4 w-full text-3xl uppercase text-teal-900 sm:text-4xl border p-4 rounded-md bg-slate-100 text-center">
+                <span className="font-sans block font-bold tracking-wide my-4 w-full text-3xl uppercase text-teal-900 sm:text-4xl border p-4 rounded-md bg-slate-100/60 text-center">
                   {to}
                 </span>
 
@@ -95,7 +95,6 @@ function Home() {
         </main>
       </div>
       <div className={`${openInvitation ? 'hidden' : ''}`}>
-        {/* <div className="absolute top-0 bottom-0 right-0 left-0 bg-no-repeat bg-[url('../assets/png/bg-abs-green.png')] bg-cover"></div> */}
         <main className="relative top-0 bottom-0 right-0 left-0">
           <div className="absolute w-screen flex flex-col justify-center items-center text-center">
             <img
@@ -103,7 +102,27 @@ function Home() {
               alt="top-left"
               className="w-5/12 h-5/12 absolute top-0 left-0 z-0 opacity-90 xl:w-3/12 xl:h-3/12"
             />
-            <div className="container p-4 bg-amber-50">
+            <div
+              className={`h-screen container p-4 bg-amber-50 ${
+                openMessage ? 'visible' : 'hidden'
+              }`}
+            >
+              <MessageProvider>
+                <div className="container px-4 max-w-screen-md mx-auto">
+                  <MessageForm />
+                  <MessageProperties />
+                  <Messagelist />
+                  <button onClick={() => setOpenMessage(!openMessage)}>
+                    Tutup Message
+                  </button>
+                </div>
+              </MessageProvider>
+            </div>
+            <div
+              className={`container p-4 bg-amber-50 ${
+                openMessage ? 'hidden' : 'visible'
+              }`}
+            >
               <div className="flex flex-col justify-center items-center text-center">
                 <div className="flex flex-col justify-center my-60 ">
                   <h3 className="text-2xl font-['Dancing_Script'] tracking-widest text-teal-900">
