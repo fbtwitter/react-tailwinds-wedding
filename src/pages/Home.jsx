@@ -106,29 +106,28 @@ function Home() {
             <div className="container p-4">
               <div className="flex flex-col justify-center items-center text-center">
                 <div className="h-screen flex flex-col justify-center mb-5">
-                  <h2 className="text-2xl font-['Dancing_Script'] tracking-wide px-2 text-teal-900">
-                    السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎
-                    <span className="block font-['Arvo'] text-lg">
-                      Assalamu&apos;alaikum Warahmatullahi Wabarakatuh{' '}
-                    </span>
-                  </h2>
-                  <h3>
-                    Dengan memohon Rahmat Allah SWT dan dengan segenap
-                    kerendahaan hati, perkenankanlah kami
-                  </h3>
-                  {/* <h3 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
+                  <h3 className="text-2xl font-['Dancing_Script'] tracking-widest px-2 text-teal-900">
                     &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
                     menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
                     agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
                     menjadikan di antaramu rasa kasih dan sayang&quot;
                     <span className="block">(QS. Ar-Rum : 21)</span>
-                  </h3> */}
+                  </h3>
                 </div>
-                <div
-                  className="bride h-screen flex flex-col justify-center items-center mb-5 sm:mb-10
-          "
-                >
-                  <h1 className="font-['Dancing_Script'] font-bold text-4xl sm:text-6xl mb-5 text-teal-900">
+
+                <div className="mb-56 flex flex-col justify-center ">
+                  <h2 className="text-3xl font-['Dancing_Script'] tracking-wide px-2 text-teal-900 mb-10">
+                    السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎
+                  </h2>
+                  <h3 className="font-['Arvo'] font-light tracking-widest text-lg text-teal-900 mx-4">
+                    Dengan memohon Rahmat Allah SWT dan dengan segenap
+                    kerendahaan hati, kami bermaksud akan menyelenggarakan ikat
+                    janji suci kami
+                  </h3>
+                </div>
+
+                <div className="bride h-screen flex flex-col justify-center items-center mb-5 sm:mb-10">
+                  <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h1>
                   <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl text-teal-700 opacity-70 mb-4">
@@ -143,7 +142,7 @@ function Home() {
                   <h2 className="font-['Dancing_Script'] font-bold text-3xl sm:text-4xl my-8 sm:my-5 text-slate-500">
                     &
                   </h2>
-                  <h1 className="font-['Dancing_Script'] font-bold text-4xl sm:text-6xl mb-5 text-teal-900">
+                  <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Reza Fauzi Augusdi, S.Tr.Kom.
                   </h1>
                   <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700 opacity-70">
@@ -162,19 +161,13 @@ function Home() {
                     kami yang dilaksanakan pada */}
 
                 <div className="event flex flex-col justify-center align-items mb-10">
-                  <h3 className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-2xl uppercase text-teal-800 mb-3 sm:mb-5">
-                    Akan Melaksanakan Pernikahan
+                  <h3 className="font-['Arvo'] font-light tracking-widest text-center text-xl sm:text-2xl  text-teal-800 mb-3 sm:mb-5">
+                    InsyaAllah akan diselenggarakan pada
                   </h3>
-                  <p className="font-['Arvo'] font-light tracking-widest text-center text-base sm:text-xl uppercase text-teal-800">
-                    Pada{' '}
-                    <span className="font-bold text-slate-900">
-                      14 JULY 2022
+                  <p className="font-['Arvo'] font-light tracking-widest text-center text-xl sm:text-xl uppercase text-teal-800">
+                    <span className="font-bold text-slate-900 underline underline-offset-4">
+                      14 JULI 2022
                     </span>
-                    , Di{' '}
-                    <span className="font-bold text-slate-900">
-                      rumah mempelai wanita,
-                    </span>{' '}
-                    JABUNG, Malang
                   </p>
 
                   <div className="max-w-base border my-8 mx-4 p-8 rounded-md bg-slate-100 flex flex-col gap-6">
