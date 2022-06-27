@@ -8,9 +8,11 @@ function MessageProperties() {
   }
 
   return (
-    <div className="message-properties">
-      <h4>{filteredMessage.length} Tasks</h4>
-      <select
+    <div className="message-properties my-4">
+      <h4 className="text-lg font-['Arvo'] text-slate-600">
+        {filteredMessage.length} Pesan
+      </h4>
+      {/* <select
         onChange={handleStatusChange}
         name="messages"
         className="message-filter"
@@ -18,7 +20,7 @@ function MessageProperties() {
         <option value="all">All</option>
         <option value="completed">Done</option>
         <option value="uncompleted">Not Done</option>
-      </select>
+      </select> */}
     </div>
   )
 }

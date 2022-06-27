@@ -10,19 +10,13 @@ function MessageItem({ item }) {
 
   return (
     <Card>
-      <p
-        className={`text-display ${
-          item.completed === true ? 'text-completed' : ''
-        }`}
-      >
-        {item.text}
-      </p>
-      <button
+      <p>{item.text}</p>
+      {/* <button
         className="completed"
         onClick={() => completedMessage(item.id, item)}
       >
         <FaCheck color="#242533" />
-      </button>
+      </button> */}
       <button className="edit" onClick={() => editMessage(item)}>
         <FaEdit color="#242533" />
       </button>

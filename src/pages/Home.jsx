@@ -108,14 +108,12 @@ function Home() {
               }`}
             >
               <MessageProvider>
-                <div className="container px-4 max-w-screen-md mx-auto">
-                  <MessageForm />
-                  <MessageProperties />
-                  <Messagelist />
-                  <button onClick={() => setOpenMessage(!openMessage)}>
-                    Tutup Message
-                  </button>
-                </div>
+                <MessageForm />
+                <MessageProperties />
+                <Messagelist />
+                <button onClick={() => setOpenMessage(!openMessage)}>
+                  Tutup Message
+                </button>
               </MessageProvider>
             </div>
             <div
@@ -137,7 +135,7 @@ function Home() {
                   <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎
                   </h2>
-                  <h3 className="font-['Arvo'] font-medium tracking-widest text-lg text-teal-900">
+                  <h3 className="font-['Arvo'] font-medium tracking-widest text-lg text-teal-900 mx-4">
                     Dengan memohon Rahmat Allah SWT dan dengan segenap
                     kerendahaan hati, kami bermaksud akan menyelenggarakan ikat
                     janji suci kami
@@ -147,7 +145,7 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h1>
-                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
+                  <p className="font-['Arvo'] tracking-wide font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
                     Putri dari Mujiono Raharjo, S.Pd. (Alm) dan Ibu Sutami
                     (Almh.)
                   </p>
@@ -162,7 +160,7 @@ function Home() {
                   <h1 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Reza Fauzi Augusdi, S.Tr.Kom.
                   </h1>
-                  <p className="font-['Arvo'] tracking-widest font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
+                  <p className="font-['Arvo'] tracking-wide font-bold text-base sm:text-3xl mb-5 text-teal-700/70">
                     Putra dari Ir. H. Rudy Skundar Oktarijanto dan Ibu Hj. Ina
                     Herlina
                   </p>
@@ -177,7 +175,7 @@ function Home() {
                   <h3 className="font-['Arvo'] font-medium tracking-widest text-center text-xl sm:text-2xl text-teal-800 mb-3 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
-                  <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase ">
+                  <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase">
                     14 JULI 2022
                   </p>
                 </div>
@@ -263,7 +261,7 @@ function Home() {
                 </div>
               </div>
               <div className="flex flex-col justify-center my-60">
-                <p className="font-['Arvo'] font-light text-lg tracking-widest text-teal-900 mx-4">
+                <p className="font-['Arvo'] font-light text-lg tracking-widest text-teal-900">
                   Sebuah kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
                   berkenan memberikan doa terbaik untuk pernikahan kami.
                 </p>
