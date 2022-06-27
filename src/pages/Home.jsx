@@ -8,6 +8,7 @@ import Messagelist from '../components/MessageList'
 import MessageProperties from '../components/MessageProperties'
 import { MessageProvider } from '../context/MessageContext'
 import { useSearchParams } from 'react-router-dom'
+import wdImage from '../assets/png/wd-2.png'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
@@ -281,10 +282,11 @@ function Home() {
                     Reza
                   </h1>
                 </div>
-                <footer className="font-['Arvo'] ">
-                  <h2 className="font-['Arvo'] font-semibold text-lg my-2 text-teal-600/80 text-center max-w-2xl">
-                    &copy; Reza Fauzi Augusdi
+                <footer>
+                  <h2 className="font-sans font-semibold text-lg my-2 text-rose-400/60 text-center max-w-2xl inline mr-1">
+                    &copy; Azam's
                   </h2>
+                  <img src={wdImage} alt="logo" className="inline w-12 -mt-2" />
                 </footer>
               </div>
               <div className="fixed bottom-4 right-4 z-10">
