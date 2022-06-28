@@ -196,7 +196,7 @@ function Home() {
                   <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900/80 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ
                   </h2>
-                  <h3 className="font-['Raleway'] font-bold tracking-wide text-lg text-teal-900/90 mx-4">
+                  <h3 className="font-['Raleway'] font-semibold tracking-wide text-lg text-teal-900/90 mx-4">
                     Dengan memohon Rahmat Allah SWT dan dengan segenap
                     kerendahaan hati, kami bermaksud akan menyelenggarakan ikat
                     janji suci kami
