@@ -160,7 +160,7 @@ function Home() {
   }
 
   return (
-    <div className="max-w-sm">
+    <div>
       <Amplop
         openInvitation={openInvitation}
         setOpenInvitation={setOpenInvitation}
@@ -179,7 +179,9 @@ function Home() {
               className="w-5/12 h-5/12 absolute bottom-0 right-0 z-0 opacity-90 xl:w-2/12 xl:h-2/12"
             />
             <div
-              className={`container p-4 ${openMessage ? 'hidden' : 'visible'}`}
+              className={`mx-auto container p-4 ${
+                openMessage ? 'hidden' : 'visible'
+              }`}
             >
               <div className="flex flex-col justify-center items-center text-center">
                 <h1 className="sr-only">Wedding Iqlima & Reza</h1>
@@ -233,7 +235,7 @@ function Home() {
                 </section>
 
                 <section className="flex flex-col justify-center align-items mb-2">
-                  <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-700 mb-4 sm:mb-5 max-w-xs">
+                  <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-900/90 mb-4 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
                   <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase">
@@ -243,7 +245,7 @@ function Home() {
                 </section>
 
                 <section className="flex flex-col gap-8 sm:flex sm:flex-row">
-                  <div className="max-w-base border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
+                  <div className="max-w-base shadow border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
                     <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
                         <h4 className="font-['Dancing_Script'] text-5xl sm:text-5xl font-light text-teal-800">
@@ -270,7 +272,7 @@ function Home() {
                       Buka Maps
                     </a>
                   </div>
-                  <div className="max-w-base border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
+                  <div className="max-w-base shadow border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
                     <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
                         <h4 className="font-['Dancing_Script'] text-5xl sm:text-5xl font-light text-teal-800">
@@ -310,7 +312,7 @@ function Home() {
                     <h1>Loading...</h1>
                   ) : listing && listing.length > 0 ? (
                     <>
-                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-[32rem] rounded-lg mx-4 bg-slate-100/60">
+                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-[32rem] rounded-lg mx-4 bg-slate-100/60 shadow">
                         {listing.map((item) => (
                           <li key={item.id} className="w-full p-4 text-left">
                             {/* <div className="font-['Raleway']">
@@ -323,56 +325,18 @@ function Home() {
                             </div> */}
                             <div className="flex justify-between space-x-3">
                               <div className="min-w-0 flex-1">
-                                <p className="text-left text-base font-medium text-gray-900 truncate">
+                                <p className="text-left text-base font-semibold text-teal-900 truncate">
                                   {item.data.name}
                                 </p>
-                                <p className="text-sm text-gray-500 truncate">
+                                <p className="text-sm font-medium text-slate-900/70 truncate">
                                   Hadir
                                 </p>
                               </div>
                               <time
                                 dateTime={item.data.timestamp.seconds}
-                                className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
+                                className="flex-shrink-0 whitespace-nowrap text-sm text-teal-900/50"
                               >
                                 {timeAgo(item.data.timestamp.seconds * 1000)}
-                                {/* {console.log(new Date(Date.now()))}
-                                {console.log(
-                                  Math.floor(
-                                    new Date(
-                                      item.data.timestamp.seconds
-                                    ).getTime() / 1000.0
-                                  )
-                                )} */}
-                                {/* {console.log(item.data.timestamp.seconds)} */}
-                                {/* {console.log(
-                                  new Date(item.data.timestamp.seconds * 1000)
-                                )} */}
-                                {/* {console.log(
-                                  new Date(
-                                    item.data.timestamp.seconds * 1000
-                                  ).getDate() +
-                                    '/' +
-                                    new Date(
-                                      item.data.timestamp.seconds * 1000
-                                    ).getDate(),
-                                  new Date(
-                                    item.data.timestamp.seconds * 1000
-                                  ).getFullYear()
-                                )} */}
-
-                                {/* {console.log(
-                                  new Date(Date.now()).getDate() -
-                                    new Date(
-                                      item.data.timestamp.seconds * 1000
-                                    ).getDate()
-                                )} */}
-                                {/* {console.log(
-                                  new Date(
-                                    item.data.timestamp.seconds * 1000
-                                  ).toLocaleTimeString()
-                                )} */}
-                                {/* {timeSince(new Date(Date.now()))}
-                                {console.log(new Date(Date.now()))} */}
                               </time>
                             </div>
                             <div className="mt-1">
@@ -381,50 +345,8 @@ function Home() {
                               </p>
                             </div>
                           </li>
-                          // <li
-                          //   key={item.id}
-                          //   id={item.id}
-                          //   className="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600"
-                          // >
-                          // <div className="flex justify-between space-x-3">
-                          //   <div className="min-w-0 flex-1">
-                          //     <span
-                          //       className="absolute inset-0"
-                          //       aria-hidden="true"
-                          //     />
-                          //     <p className="text-left text-sm font-medium text-gray-900 truncate">
-                          //       {item.data.name}
-                          //     </p>
-                          //     <p className="text-sm text-gray-500 truncate">
-                          //       subject
-                          //     </p>
-                          //   </div>
-                          // <time
-                          //   dateTime={item.data.timestamp.seconds}
-                          //   className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
-                          // >
-                          //   time
-                          // </time>
-                          //   </div>
-                          // <div className="mt-1">
-                          //   <p className="line-clamp-2 text-sm text-gray-600">
-                          //     {item.data.message}
-                          //   </p>
-                          // </div>
-                          // </li>
                         ))}
                       </ul>
-
-                      {/* {listing.map((item) => (
-                        <div key={item.id} id={item.id}>
-                          {' '}
-                          {item.data.message}
-                          {item.data.name}
-                          {new Date(
-                            item.data.timestamp.seconds * 1000
-                          ).toISOString()}
-                        </div>
-                      ))} */}
                     </>
                   ) : (
                     <>No data yet</>
