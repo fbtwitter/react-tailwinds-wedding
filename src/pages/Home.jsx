@@ -339,7 +339,7 @@ function Home() {
                   className="inline w-12 -mt-2"
                 />
               </footer>
-              <div className="fixed bottom-4 right-4 z-10">
+              <div className="fixed bottom-4 right-2 z-10">
                 <button
                   className="px-4 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white"
                   onClick={() => setModalIsOpen(!modalIsOpen)}
