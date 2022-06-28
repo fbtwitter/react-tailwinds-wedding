@@ -82,6 +82,33 @@ function Home() {
     fetchListing()
   }, [])
 
+  const timeSince = (date) => {
+    let seconds = Math.floor((new Date() - date) / 1000)
+
+    let interval = seconds / 31536000
+
+    if (interval > 1) {
+      return Math.floor(interval) + ' years'
+    }
+    interval = seconds / 2592000
+    if (interval > 1) {
+      return Math.floor(interval) + ' months'
+    }
+    interval = seconds / 86400
+    if (interval > 1) {
+      return Math.floor(interval) + ' days'
+    }
+    interval = seconds / 3600
+    if (interval > 1) {
+      return Math.floor(interval) + ' hours'
+    }
+    interval = seconds / 60
+    if (interval > 1) {
+      return Math.floor(interval) + ' minutes'
+    }
+    return Math.floor(seconds) + ' seconds'
+  }
+
   return (
     <div className="max-w-sm">
       <Amplop
@@ -90,7 +117,7 @@ function Home() {
       />
       <div className={`${openInvitation ? 'hidden' : ''}`}>
         <main className="relative top-0 bottom-0 right-0 left-0">
-          <div className="absolute w-screen flex flex-col justify-center items-center text-center bg-amber-50">
+          <div className="absolute w-screen bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
             <img
               src={LeafLeft}
               alt="top-left"
@@ -115,7 +142,7 @@ function Home() {
                     <span className="block">(QS. Ar-Rum : 21)</span>
                   </h2>
                 </section>
-                <section className="flex flex-col justify-center my-30">
+                <section className="flex flex-col justify-center">
                   <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900/80 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ
                   </h2>
@@ -155,23 +182,24 @@ function Home() {
                   </p>
                 </section>
 
-                <section className="my-30 flex flex-col justify-center align-items mb-4">
+                <section className="flex flex-col justify-center align-items mb-2">
                   <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-700 mb-4 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
                   <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase">
                     14 JULI 2022
+                    <span className="block max-w-[3rem] mx-auto bg-teal-800 w-full h-[0.1rem] my-4 animate-ping"></span>
                   </p>
                 </section>
 
-                <section className="sm:flex sm:flex-row">
-                  <div className="max-w-base border my-8 mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
+                <section className="flex flex-col gap-8 sm:flex sm:flex-row">
+                  <div className="max-w-base border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
                     <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
                         <h4 className="font-['Dancing_Script'] text-5xl sm:text-5xl font-light text-teal-800">
                           Akad Nikah
                         </h4>
-                        <span className="bg-slate-800 w-full h-[0.01rem] my-4"></span>
+                        <span className="bg-slate-800 w-full h-[1px] my-4"></span>
                         <h4 className="font-['Raleway'] text-xl sm:text-2xl ont-light text-slate-600">
                           08.30 WIB
                         </h4>
@@ -192,13 +220,13 @@ function Home() {
                       Buka Maps
                     </a>
                   </div>
-                  <div className="max-w-base border my-8 mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
+                  <div className="max-w-base border mx-4 p-8 rounded-md bg-slate-100/60 flex flex-col gap-6">
                     <div className="flex justify-center">
                       <div className="flex flex-col items-center gap-2">
                         <h4 className="font-['Dancing_Script'] text-5xl sm:text-5xl font-light text-teal-800">
                           Syukuran
                         </h4>
-                        <span className="bg-slate-800 w-full h-[0.01rem] my-4"></span>
+                        <span className="bg-slate-800 w-full h-[1px] my-4"></span>
                         <h4 className="font-['Raleway'] text-xl sm:text-2xl ont-light text-slate-600">
                           10.00 - 12.00 WIB
                         </h4>
@@ -221,18 +249,122 @@ function Home() {
                   </div>
                 </section>
 
-                <section className="my-36">
-                  <p className="font-['Raleway'] font-semibold text-lg tracking-widest text-teal-900">
+                <section className="mt-32 mb-16">
+                  <p className="font-['Raleway'] font-semibold tracking-wider text-lg text-teal-900">
                     Sebuah kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
                     berkenan memberikan doa terbaik untuk pernikahan kami.
                   </p>
                 </section>
-                <section>
+                <section className="w-full">
                   {loading ? (
                     <h1>Loading...</h1>
                   ) : listing && listing.length > 0 ? (
                     <>
-                      {listing.map((item) => (
+                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-96 rounded-lg mx-4 bg-slate-100/60">
+                        {listing.map((item) => (
+                          <li key={item.id} className="w-full p-4 text-left">
+                            {/* <div className="font-['Raleway']">
+                              <p className="text-sm font-semibold text-slate-900">
+                                {item.data.name}
+                              </p>
+                              <p className="text-sm font-medium text-slate-500">
+                                {item.data.message}
+                              </p>
+                            </div> */}
+                            <div className="flex justify-between space-x-3">
+                              <div className="min-w-0 flex-1">
+                                <p className="text-left text-base font-medium text-gray-900 truncate">
+                                  {item.data.name}
+                                </p>
+                                <p className="text-sm text-gray-500 truncate">
+                                  Hadir
+                                </p>
+                              </div>
+                              <time
+                                dateTime={item.data.timestamp.seconds}
+                                className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
+                              >
+                                {/* {console.log(new Date(Date.now()))}
+                                {console.log(
+                                  Math.floor(
+                                    new Date(
+                                      item.data.timestamp.seconds
+                                    ).getTime() / 1000.0
+                                  )
+                                )} */}
+                                {/* {console.log(item.data.timestamp.seconds)} */}
+                                {/* {console.log(
+                                  new Date(item.data.timestamp.seconds * 1000)
+                                )} */}
+                                {console.log(
+                                  new Date(
+                                    item.data.timestamp.seconds * 1000
+                                  ).getDate() +
+                                    '/' +
+                                    new Date(
+                                      item.data.timestamp.seconds * 1000
+                                    ).getDate(),
+                                  new Date(
+                                    item.data.timestamp.seconds * 1000
+                                  ).getFullYear()
+                                )}
+
+                                {/* {console.log(
+                                  new Date(Date.now()).getDate() -
+                                    new Date(
+                                      item.data.timestamp.seconds * 1000
+                                    ).getDate()
+                                )} */}
+                                {/* {console.log(
+                                  new Date(
+                                    item.data.timestamp.seconds * 1000
+                                  ).toLocaleTimeString()
+                                )} */}
+                                {/* {timeSince(new Date(Date.now()))}
+                                {console.log(new Date(Date.now()))} */}
+                              </time>
+                            </div>
+                            <div className="mt-1">
+                              <p className="line-clamp-2 text-base text-gray-600">
+                                {item.data.message}
+                              </p>
+                            </div>
+                          </li>
+                          // <li
+                          //   key={item.id}
+                          //   id={item.id}
+                          //   className="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600"
+                          // >
+                          // <div className="flex justify-between space-x-3">
+                          //   <div className="min-w-0 flex-1">
+                          //     <span
+                          //       className="absolute inset-0"
+                          //       aria-hidden="true"
+                          //     />
+                          //     <p className="text-left text-sm font-medium text-gray-900 truncate">
+                          //       {item.data.name}
+                          //     </p>
+                          //     <p className="text-sm text-gray-500 truncate">
+                          //       subject
+                          //     </p>
+                          //   </div>
+                          // <time
+                          //   dateTime={item.data.timestamp.seconds}
+                          //   className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
+                          // >
+                          //   time
+                          // </time>
+                          //   </div>
+                          // <div className="mt-1">
+                          //   <p className="line-clamp-2 text-sm text-gray-600">
+                          //     {item.data.message}
+                          //   </p>
+                          // </div>
+                          // </li>
+                        ))}
+                      </ul>
+
+                      {/* {listing.map((item) => (
                         <div key={item.id} id={item.id}>
                           {' '}
                           {item.data.message}
@@ -241,7 +373,7 @@ function Home() {
                             item.data.timestamp.seconds * 1000
                           ).toISOString()}
                         </div>
-                      ))}
+                      ))} */}
                     </>
                   ) : (
                     <>No data yet</>
@@ -264,7 +396,7 @@ function Home() {
                   </div>
                 </section>
               </div>
-              <footer>
+              <footer className="text-center">
                 <h2 className="font-sans font-semibold text-lg my-2 text-rose-400/60 text-center max-w-2xl inline mr-1">
                   &copy; Azam&apos;s
                 </h2>

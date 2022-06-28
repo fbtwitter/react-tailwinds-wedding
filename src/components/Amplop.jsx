@@ -18,7 +18,7 @@ const Amplop = ({ openInvitation, setOpenInvitation }) => {
         }`}
       >
         <main className="absolute top-0 bottom-0 right-0 left-0">
-          <div className="relative w-screen h-screen flex flex-col justify-center items-center bg-amber-50">
+          <div className="relative w-screen h-screen flex flex-col justify-center items-center bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
             <img
               src={LeafLeft}
               alt="top-left"
