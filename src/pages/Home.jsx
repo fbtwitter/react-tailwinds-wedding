@@ -115,11 +115,11 @@ function Home() {
                     <span className="block">(QS. Ar-Rum : 21)</span>
                   </h2>
                 </section>
-                <section className="flex flex-col justify-center my-36">
-                  <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900 mb-8">
+                <section className="flex flex-col justify-center my-30">
+                  <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900/80 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ
                   </h2>
-                  <h3 className="font-['Raleway'] font-semibold tracking-wider text-lg text-teal-900 mx-4">
+                  <h3 className="font-['Raleway'] font-bold tracking-wide text-lg text-teal-900/90 mx-4">
                     Dengan memohon Rahmat Allah SWT dan dengan segenap
                     kerendahaan hati, kami bermaksud akan menyelenggarakan ikat
                     janji suci kami
@@ -129,11 +129,11 @@ function Home() {
                   <h2 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h2>
-                  <p className="font-['Raleway'] tracking-wide font-bold text-lg sm:text-3xl mb-5 text-teal-700/70">
+                  <p className="font-['Raleway'] font-semibold text-lg sm:text-3xl mb-5 text-teal-700/70">
                     Putri dari Mujiono Raharjo, S.Pd. (Alm) dan Ibu Sutami
                     (Almh.)
                   </p>
-                  <p className="font-['Raleway'] tracking-wide text-base text-teal-800">
+                  <p className="font-['Raleway'] text-base text-teal-800">
                     {' '}
                     Jalan Dahlia 23 RT 007 RW 001, Slamparejo, Kec. Jabung,
                     Kabupaten Malang, Jawa Timur 65155
@@ -144,18 +144,18 @@ function Home() {
                   <h2 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Reza Fauzi Augusdi, S.Tr.Kom.
                   </h2>
-                  <p className="font-['Raleway'] tracking-wide font-bold text-lg sm:text-3xl mb-5 text-teal-700/70">
+                  <p className="font-['Raleway'] font-semibold text-lg sm:text-3xl mb-5 text-teal-700/70">
                     Putra dari Ir. H. Rudy Skundar Oktarijanto dan Ibu Hj. Ina
                     Herlina
                   </p>
-                  <p className="font-['Raleway'] tracking-wide text-base text-teal-800">
+                  <p className="font-['Raleway'] text-base text-teal-800">
                     {' '}
                     Perum Graha Indah Baturan Blok G No 6 Colomadu, Karanganyar,
                     Jawa Tengah 57171
                   </p>
                 </section>
 
-                <section className="my-36 flex flex-col justify-center align-items mb-4">
+                <section className="my-30 flex flex-col justify-center align-items mb-4">
                   <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-700 mb-4 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>

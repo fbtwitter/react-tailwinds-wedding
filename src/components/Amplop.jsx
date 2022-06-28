@@ -2,7 +2,7 @@ import { useSearchParams } from 'react-router-dom'
 import LeafLeft from '../assets/png/leaf-left.png'
 import LeafRight from '../assets/png/leaf-right.png'
 
-const Amplopj = ({ openInvitation, setOpenInvitation }) => {
+const Amplop = ({ openInvitation, setOpenInvitation }) => {
   const [searchParams] = useSearchParams({
     to: 'My Bestie',
   })
@@ -46,7 +46,7 @@ const Amplopj = ({ openInvitation, setOpenInvitation }) => {
                   </h1>
                 </div>
 
-                <h2 className="font-['Raleway'] font-semibold text-lg my-2  text-teal-800 text-center max-w-2xl sm:text-2xl">
+                <h2 className="font-['Raleway'] font-semibold text-base my-2  text-teal-800 text-center max-w-2xl sm:text-2xl">
                   Kepada Bapak/Ibu/Saudara/i
                 </h2>
 
@@ -69,4 +69,4 @@ const Amplopj = ({ openInvitation, setOpenInvitation }) => {
   )
 }
 
-export default Amplopj
+export default Amplop
