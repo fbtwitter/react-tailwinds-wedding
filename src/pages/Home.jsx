@@ -328,7 +328,7 @@ function Home() {
                                 <p className="text-left text-base font-semibold text-teal-900 truncate">
                                   {item.data.name}
                                 </p>
-                                <p className="text-sm font-medium text-slate-900/70 truncate">
+                                <p className="text-sm text-slate-900/60 truncate">
                                   Hadir
                                 </p>
                               </div>
