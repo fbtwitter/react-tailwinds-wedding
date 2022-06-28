@@ -310,7 +310,7 @@ function Home() {
                     <h1>Loading...</h1>
                   ) : listing && listing.length > 0 ? (
                     <>
-                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-96 rounded-lg mx-4 bg-slate-100/60">
+                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-[32rem] rounded-lg mx-4 bg-slate-100/60">
                         {listing.map((item) => (
                           <li key={item.id} className="w-full p-4 text-left">
                             {/* <div className="font-['Raleway']">
