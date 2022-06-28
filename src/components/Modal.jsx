@@ -31,15 +31,12 @@ const Modal = ({ modalIsOpen, setModalIsOpen }) => {
     setValue('pesan', '')
 
     setModalIsOpen(false)
-    console.log(data)
   }
-
-  console.log(errors)
 
   return (
     <div
-      className={`flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 bg-black/50 transition-all ease-out ${
-        modalIsOpen ? 'opacity-100 z-50 visible' : 'hidden'
+      className={`fade flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 bg-black/60  transition-all duration-300 ${
+        modalIsOpen ? 'opacity-100 z-50' : 'opacity-0'
       }`}
       onClick={handleClickOverlay}
       role="presentation"
@@ -101,6 +98,7 @@ const Modal = ({ modalIsOpen, setModalIsOpen }) => {
                 <textarea
                   id={`${id}-pesan`}
                   type="text"
+                  rows={5}
                   className="w-full p-3 text-sm rounded bg-white border focus:outline-none focus:border focus:border-slate-800 focus-within:outline-none focus-within:border focus-within:border-slate-800"
                   placeholder="Tuliskan Namamu"
                   {...register('pesan', {

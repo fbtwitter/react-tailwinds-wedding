@@ -309,7 +309,9 @@ function Home() {
                       </ul>
                     </>
                   ) : (
-                    <>No data yet</>
+                    <span className="text-teal-900 font-medium text-lg font-['Raleway']">
+                      No data yet
+                    </span>
                   )}
                 </section>
                 <section className="my-36">
