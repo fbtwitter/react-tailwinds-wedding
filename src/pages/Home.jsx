@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import WeddingSong from '../assets/mp3/teman-hidup.mp3'
-import LeafLeft from '../assets/png/leaf-left.png'
-import LeafRight from '../assets/png/leaf-right.png'
+import LeafLeft from '../assets/png/leaf-leftt.png'
+import LeafRight from '../assets/png/leaf-rightt.png'
 import { useEffect, useState } from 'react'
 import wdImage from '../assets/png/wd-2.png'
 import { collection, query, orderBy, getDocs } from 'firebase/firestore'
@@ -11,7 +11,7 @@ import { ReactComponent as GMapsIcon } from '../assets/svg/gmaps.svg'
 import { ReactComponent as MessageIcon } from '../assets/svg/message.svg'
 import Modal from '../components/Modal'
 import { ReactComponent as SpinnerIcon } from '../assets/svg/spinner.svg'
-import { ReactComponent as PesanIcon } from '../assets/svg/pesan.svg'
+// import { ReactComponent as PesanIcon } from '../assets/svg/pesan.svg'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
@@ -133,7 +133,7 @@ function Home() {
         className={`${openInvitation ? 'hidden' : ''} ${modalIsOpen ? '' : ''}`}
       >
         <main className="relative top-0 bottom-0 right-0 left-0">
-          <div className="absolute w-screen bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
+          <div className="absolute w-screen bg-[url('../assets/png/bg-green.png')] bg-cover">
             <img
               src={LeafLeft}
               alt="top-left"

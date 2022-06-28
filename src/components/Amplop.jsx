@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
-import LeafLeft from '../assets/png/leaf-left.png'
-import LeafRight from '../assets/png/leaf-right.png'
+import LeafLeft from '../assets/png/leaf-leftt.png'
+import LeafRight from '../assets/png/leaf-rightt.png'
 
 const Amplop = ({ openInvitation, setOpenInvitation }) => {
   const [searchParams] = useSearchParams({
