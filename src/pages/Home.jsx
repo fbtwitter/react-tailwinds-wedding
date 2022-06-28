@@ -82,31 +82,81 @@ function Home() {
     fetchListing()
   }, [])
 
-  const timeSince = (date) => {
-    let seconds = Math.floor((new Date() - date) / 1000)
+  const MONTH_NAMES = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ]
 
-    let interval = seconds / 31536000
+  function getFormattedDate(date, prefomattedDate = false, hideYear = false) {
+    const day = date.getDate()
+    const month = MONTH_NAMES[date.getMonth()]
+    const year = date.getFullYear()
+    const hours = date.getHours()
+    let minutes = date.getMinutes()
 
-    if (interval > 1) {
-      return Math.floor(interval) + ' years'
+    if (minutes < 10) {
+      // Adding leading zero to minutes
+      minutes = `0${minutes}`
     }
-    interval = seconds / 2592000
-    if (interval > 1) {
-      return Math.floor(interval) + ' months'
+
+    if (prefomattedDate) {
+      // Today at 10:20
+      // Yesterday at 10:20
+      return `${prefomattedDate} at ${hours}:${minutes}`
     }
-    interval = seconds / 86400
-    if (interval > 1) {
-      return Math.floor(interval) + ' days'
+
+    if (hideYear) {
+      // 10. January at 10:20
+      return `${day}. ${month} at ${hours}:${minutes}`
     }
-    interval = seconds / 3600
-    if (interval > 1) {
-      return Math.floor(interval) + ' hours'
+
+    // 10. January 2017. at 10:20
+    return `${day}. ${month} ${year}. at ${hours}:${minutes}`
+  }
+
+  // --- Main function
+  function timeAgo(dateParam) {
+    if (!dateParam) {
+      return null
     }
-    interval = seconds / 60
-    if (interval > 1) {
-      return Math.floor(interval) + ' minutes'
+
+    const date = typeof dateParam === 'object' ? dateParam : new Date(dateParam)
+    const DAY_IN_MS = 86400000 // 24 * 60 * 60 * 1000
+    const today = new Date()
+    const yesterday = new Date(today - DAY_IN_MS)
+    const seconds = Math.round((today - date) / 1000)
+    const minutes = Math.round(seconds / 60)
+    const isToday = today.toDateString() === date.toDateString()
+    const isYesterday = yesterday.toDateString() === date.toDateString()
+    const isThisYear = today.getFullYear() === date.getFullYear()
+
+    if (seconds < 5) {
+      return 'now'
+    } else if (seconds < 60) {
+      return `${seconds} seconds ago`
+    } else if (seconds < 90) {
+      return 'about a minute ago'
+    } else if (minutes < 60) {
+      return `${minutes} minutes ago`
+    } else if (isToday) {
+      return getFormattedDate(date, 'Today') // Today at 10:20
+    } else if (isYesterday) {
+      return getFormattedDate(date, 'Yesterday') // Yesterday at 10:20
+    } else if (isThisYear) {
+      return getFormattedDate(date, false, true) // 10. January at 10:20
     }
-    return Math.floor(seconds) + ' seconds'
+
+    return getFormattedDate(date) // 10. January 2017. at 10:20
   }
 
   return (
@@ -284,6 +334,7 @@ function Home() {
                                 dateTime={item.data.timestamp.seconds}
                                 className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
                               >
+                                {timeAgo(item.data.timestamp.seconds * 1000)}
                                 {/* {console.log(new Date(Date.now()))}
                                 {console.log(
                                   Math.floor(
@@ -296,7 +347,7 @@ function Home() {
                                 {/* {console.log(
                                   new Date(item.data.timestamp.seconds * 1000)
                                 )} */}
-                                {console.log(
+                                {/* {console.log(
                                   new Date(
                                     item.data.timestamp.seconds * 1000
                                   ).getDate() +
@@ -307,7 +358,7 @@ function Home() {
                                   new Date(
                                     item.data.timestamp.seconds * 1000
                                   ).getFullYear()
-                                )}
+                                )} */}
 
                                 {/* {console.log(
                                   new Date(Date.now()).getDate() -
