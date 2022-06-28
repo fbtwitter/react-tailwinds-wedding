@@ -3,67 +3,29 @@ import WeddingSong from '../assets/mp3/teman-hidup.mp3'
 import LeafLeft from '../assets/png/leaf-left.png'
 import LeafRight from '../assets/png/leaf-right.png'
 import { useEffect, useState } from 'react'
-import MessageForm from '../components/MessageForm'
-import Messagelist from '../components/MessageList'
-import MessageProperties from '../components/MessageProperties'
-import { MessageProvider } from '../context/MessageContext'
 import wdImage from '../assets/png/wd-2.png'
-import {
-  getDoc,
-  doc,
-  addDoc,
-  collection,
-  serverTimestamp,
-  query,
-  orderBy,
-  getDocs,
-} from 'firebase/firestore'
+import { collection, query, orderBy, getDocs } from 'firebase/firestore'
 import { db } from '../firebase.config'
-import Button from '../components/shared/Button'
-import Card from '../components/shared/Card'
 import Amplop from '../components/Amplop'
 import { ReactComponent as GMapsIcon } from '../assets/svg/gmaps.svg'
 import { ReactComponent as MessageIcon } from '../assets/svg/message.svg'
+import Modal from '../components/Modal'
+import { ReactComponent as SpinnerIcon } from '../assets/svg/spinner.svg'
+import { ReactComponent as PesanIcon } from '../assets/svg/pesan.svg'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
-  const [openMessage, setOpenMessage] = useState(false)
+  const [openMessage] = useState(false)
   const [listing, setListing] = useState(null)
   const [loading, setLoading] = useState(false)
-
-  const [formData, setFormData] = useState({
-    name: '',
-    attendance: '',
-    message: '',
-  })
-
-  const { name, message, attendance } = formData
-
-  const onSubmit = async (e) => {
-    e.preventDefault()
-
-    const formDataCopy = {
-      ...formData,
-      timestamp: serverTimestamp(),
-    }
-
-    await addDoc(collection(db, 'confirmation'), formDataCopy)
-  }
-
-  // const onChange = (e) => {
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [e.target.id]: e.target.value,
-  //   }))
-  // }
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   useEffect(() => {
-    setLoading(true)
     const fetchListing = async () => {
+      setLoading(true)
       const listingRef = collection(db, 'confirmation')
 
       const q = query(listingRef, orderBy('timestamp', 'desc'))
-
       const querySnap = await getDocs(q)
 
       const listings = []
@@ -79,8 +41,10 @@ function Home() {
       setLoading(false)
     }
 
-    fetchListing()
-  }, [])
+    if (modalIsOpen === false) {
+      fetchListing()
+    }
+  }, [modalIsOpen])
 
   const MONTH_NAMES = [
     'January',
@@ -165,7 +129,9 @@ function Home() {
         openInvitation={openInvitation}
         setOpenInvitation={setOpenInvitation}
       />
-      <div className={`${openInvitation ? 'hidden' : ''}`}>
+      <div
+        className={`${openInvitation ? 'hidden' : ''} ${modalIsOpen ? '' : ''}`}
+      >
         <main className="relative top-0 bottom-0 right-0 left-0">
           <div className="absolute w-screen bg-[url('../assets/png/bg-abs-green.png')] bg-cover">
             <img
@@ -309,27 +275,21 @@ function Home() {
                 </section>
                 <section className="w-full">
                   {loading ? (
-                    <h1>Loading...</h1>
+                    <>
+                      <SpinnerIcon
+                        className="animate-spin text-slate-900 mx-auto"
+                        width={'48'}
+                      />
+                    </>
                   ) : listing && listing.length > 0 ? (
                     <>
-                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-[32rem] rounded-lg mx-4 bg-slate-100/60 shadow">
+                      <ul className="divide-y divide-slate-400/10 overflow-y-scroll max-h-[32rem] rounded-tl-none rounded-lg mx-4 bg-slate-100/60 shadow">
                         {listing.map((item) => (
                           <li key={item.id} className="w-full p-4 text-left">
-                            {/* <div className="font-['Raleway']">
-                              <p className="text-sm font-semibold text-slate-900">
-                                {item.data.name}
-                              </p>
-                              <p className="text-sm font-medium text-slate-500">
-                                {item.data.message}
-                              </p>
-                            </div> */}
                             <div className="flex justify-between space-x-3">
                               <div className="min-w-0 flex-1">
                                 <p className="text-left text-base font-semibold text-teal-900 truncate">
-                                  {item.data.name}
-                                </p>
-                                <p className="text-sm text-slate-900/60 truncate">
-                                  Hadir
+                                  {item.data.namaLengkap}
                                 </p>
                               </div>
                               <time
@@ -341,7 +301,7 @@ function Home() {
                             </div>
                             <div className="mt-1">
                               <p className="line-clamp-2 text-base text-gray-600">
-                                {item.data.message}
+                                {item.data.pesan}
                               </p>
                             </div>
                           </li>
@@ -382,9 +342,10 @@ function Home() {
               <div className="fixed bottom-4 right-4 z-10">
                 <button
                   className="px-4 h-12 mr-3 rounded-full flex justify-center items-center bg-teal-700 text-white"
-                  onClick={() => setOpenMessage(!openMessage)}
+                  onClick={() => setModalIsOpen(!modalIsOpen)}
                 >
                   <span className="mr-2 font-semibold">Kirim Pesan</span>
+                  {/* <PesanIcon className="fill-current" width={'24'} /> */}
                   <MessageIcon width={'18'} className="fill-current" />
                 </button>
               </div>
@@ -392,6 +353,7 @@ function Home() {
           </div>
         </main>
       </div>
+      <Modal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
       {!openInvitation && (
         <div className="music">
           <audio src={WeddingSong} id="my_audio" loop="loop"></audio>

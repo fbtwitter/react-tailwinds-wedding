@@ -55,7 +55,7 @@ const Amplop = ({ openInvitation, setOpenInvitation }) => {
                 </span>
 
                 <button
-                  className="font-['Raleway'] text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                  className="font-['Raleway'] text-base font-semibold text-white bg-teal-700 py-3 px-8 rounded-xl hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out animate-pulse"
                   onClick={() => setOpenInvitation(!openInvitation)}
                 >
                   Buka Undangan
