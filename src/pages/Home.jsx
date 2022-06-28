@@ -115,7 +115,7 @@ function Home() {
                     <span className="block">(QS. Ar-Rum : 21)</span>
                   </h2>
                 </section>
-                <section className="flex flex-col justify-center my-60">
+                <section className="flex flex-col justify-center my-36">
                   <h2 className="text-3xl font-['Dancing_Script'] tracking-normal font-bold text-teal-900 mb-8">
                     السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ
                   </h2>
@@ -125,7 +125,7 @@ function Home() {
                     janji suci kami
                   </h3>
                 </section>
-                <section className="my-60 flex flex-col justify-center items-center sm:mb-10">
+                <section className="my-36 flex flex-col justify-center items-center sm:mb-10">
                   <h2 className="font-['Dancing_Script'] font-bold text-3xl sm:text-6xl mb-5 text-teal-900">
                     Iqlima Syahara, A.P.A.Pj
                   </h2>
@@ -155,7 +155,7 @@ function Home() {
                   </p>
                 </section>
 
-                <section className="flex flex-col justify-center align-items mb-4">
+                <section className="my-36 flex flex-col justify-center align-items mb-4">
                   <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-700 mb-4 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
@@ -221,7 +221,7 @@ function Home() {
                   </div>
                 </section>
 
-                <section className="my-60">
+                <section className="my-36">
                   <p className="font-['Raleway'] font-semibold text-lg tracking-widest text-teal-900">
                     Sebuah kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
                     berkenan memberikan doa terbaik untuk pernikahan kami.
@@ -247,7 +247,7 @@ function Home() {
                     <>No data yet</>
                   )}
                 </section>
-                <section className="my-60">
+                <section className="my-36">
                   <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
                     Kami yang berhabagia,
                   </h2>
