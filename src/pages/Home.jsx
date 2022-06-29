@@ -204,8 +204,9 @@ function Home() {
                   <h3 className="font-['Raleway'] font-medium tracking-wider text-center text-xl sm:text-2xl text-teal-900/90 mb-4 sm:mb-5 max-w-xs">
                     InsyaAllah akan diselenggarakan pada
                   </h3>
-                  <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-xl uppercase">
-                    14 JULI 2022
+                  <p className="font-['Arvo'] tracking-widest text-center font-bold text-3xl text-teal-900 sm:text-3xl uppercase">
+                    Kamis
+                    <span className="block mt-1">14 JULI 2022</span>
                     <span className="block max-w-[3rem] mx-auto bg-teal-800 w-full h-[0.1rem] my-4 animate-ping"></span>
                   </p>
                 </section>
