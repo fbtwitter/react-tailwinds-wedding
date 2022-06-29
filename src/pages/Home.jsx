@@ -130,7 +130,9 @@ function Home() {
         setOpenInvitation={setOpenInvitation}
       />
       <div
-        className={`${openInvitation ? 'hidden' : ''} ${modalIsOpen ? '' : ''}`}
+        className={`${openInvitation ? 'invisible hidden' : 'visible'} ${
+          modalIsOpen ? '' : ''
+        }`}
       >
         <main className="relative top-0 bottom-0 right-0 left-0">
           <div className="absolute w-screen bg-[url('../assets/png/bg-green.png')] bg-cover">
@@ -146,7 +148,7 @@ function Home() {
             />
             <div
               className={`mx-auto container p-4 ${
-                openMessage ? 'hidden' : 'visible'
+                openMessage ? 'invisible' : 'visible'
               }`}
             >
               <div className="flex flex-col justify-center items-center text-center">

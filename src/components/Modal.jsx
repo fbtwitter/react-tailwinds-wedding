@@ -36,7 +36,7 @@ const Modal = ({ modalIsOpen, setModalIsOpen }) => {
   return (
     <div
       className={`fade flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 bg-black/60  transition-all duration-300 ${
-        modalIsOpen ? 'opacity-100 z-50' : 'opacity-0'
+        modalIsOpen ? 'opacity-100 z-50 visible' : 'opacity-0 invisible'
       }`}
       onClick={handleClickOverlay}
       role="presentation"
