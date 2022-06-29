@@ -35,14 +35,14 @@ const Modal = ({ modalIsOpen, setModalIsOpen }) => {
 
   return (
     <div
-      className={`fade flex justify-center items-center fixed top-0 right-0 bottom-0 left-0 bg-black/60  transition-all duration-300 ${
+      className={`fade flex justify-center items-center fixed w-screen top-0 right-0 bottom-0 left-0 bg-black/60  transition-all duration-300 ${
         modalIsOpen ? 'opacity-100 z-50 visible' : 'opacity-0 invisible'
       }`}
       onClick={handleClickOverlay}
       role="presentation"
       onKeyDown={handleClickOverlay}
     >
-      <div className="modal grid items-stretch w-screen bg-white/95 shadow text-black rounded-lg relative max-w-sm">
+      <div className="modal grid items-stretch w-full mx-4 bg-white/95 shadow text-black rounded-lg relative max-w-sm">
         <div className="p-6">
           <button
             className="absolute top-6 right-6 p-0 bg-transparent opacity-40 cursor-pointer"
