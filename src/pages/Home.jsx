@@ -313,13 +313,13 @@ function Home() {
                     </>
                   ) : (
                     <span className="text-teal-900 font-medium text-lg font-['Raleway']">
-                      No data yet
+                      Belum ada pesan
                     </span>
                   )}
                 </section>
                 <section className="my-36">
                   <h2 className="font-['Dancing_Script'] font-semibold text-2xl my-2 text-teal-800 text-center max-w-2xl opacity-50">
-                    Kami yang berhabagia,
+                    Kami yang berbahagia,
                   </h2>
                   <div className="flex justify-center items-center mb-5 ">
                     <h1 className="font-['Dancing_Script'] font-bold text-5xl my-5 text-teal-900">

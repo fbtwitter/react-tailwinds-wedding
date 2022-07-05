@@ -100,7 +100,7 @@ const Modal = ({ modalIsOpen, setModalIsOpen }) => {
                   type="text"
                   rows={5}
                   className="w-full p-3 text-sm rounded bg-white border focus:outline-none focus:border focus:border-slate-800 focus-within:outline-none focus-within:border focus-within:border-slate-800"
-                  placeholder="Tuliskan Namamu"
+                  placeholder="Tuliskan Pesanmu"
                   {...register('pesan', {
                     required: 'Pesan is required',
                     minLength: {
