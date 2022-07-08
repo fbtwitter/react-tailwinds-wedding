@@ -1,17 +1,16 @@
-/* eslint-disable jsx-a11y/media-has-caption */
-import WeddingSong from '../assets/mp3/teman-hidup.mp3'
-import LeafLeft from '../assets/png/leaf-leftt.png'
-import LeafRight from '../assets/png/leaf-rightt.png'
 import { useEffect, useState } from 'react'
-import wdImage from '../assets/png/wd.png'
 import { collection, query, orderBy, getDocs } from 'firebase/firestore'
 import { db } from '../firebase.config'
+/* eslint-disable jsx-a11y/media-has-caption */
+import WeddingSong from '../assets/mp3/love.mp3'
+import LeafLeft from '../assets/png/leaf-leftt.png'
+import LeafRight from '../assets/png/leaf-rightt.png'
+import wdImage from '../assets/png/wd.png'
+import Modal from '../components/Modal'
 import Amplop from '../components/Amplop'
+import { ReactComponent as SpinnerIcon } from '../assets/svg/spinner.svg'
 import { ReactComponent as GMapsIcon } from '../assets/svg/gmaps.svg'
 import { ReactComponent as MessageIcon } from '../assets/svg/message.svg'
-import Modal from '../components/Modal'
-import { ReactComponent as SpinnerIcon } from '../assets/svg/spinner.svg'
-// import { ReactComponent as PesanIcon } from '../assets/svg/pesan.svg'
 
 function Home() {
   const [openInvitation, setOpenInvitation] = useState(true)
