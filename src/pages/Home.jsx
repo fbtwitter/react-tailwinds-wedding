@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { collection, query, orderBy, getDocs } from 'firebase/firestore'
 import { db } from '../firebase.config'
 /* eslint-disable jsx-a11y/media-has-caption */
-import WeddingSong from '../assets/mp3/love.mp3'
+import WeddingSong from '../assets/mp3/teman-hidup.mp3'
 import LeafLeft from '../assets/png/leaf-leftt.png'
 import LeafRight from '../assets/png/leaf-rightt.png'
 import wdImage from '../assets/png/wd.png'
