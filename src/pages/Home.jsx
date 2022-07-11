@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { collection, query, orderBy, getDocs } from 'firebase/firestore'
 import { db } from '../firebase.config'
 /* eslint-disable jsx-a11y/media-has-caption */
-import WeddingSong from '../assets/mp3/teman-hidup.mp3'
+import WeddingSong from '../assets/mp3/cloy-instrument.mp3'
 import LeafLeft from '../assets/png/leaf-leftt.png'
 import LeafRight from '../assets/png/leaf-rightt.png'
 import wdImage from '../assets/png/wd.png'
@@ -335,7 +335,7 @@ function Home() {
               </div>
               <footer className="text-center">
                 <h2 className="font-sans font-semibold text-lg my-2 text-rose-400/60 text-center max-w-2xl inline mr-1">
-                  &copy; Azam&apos;s
+                  &copy; Me - Azam&apos;s
                 </h2>
                 <img
                   src={wdImage}
